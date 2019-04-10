@@ -1,0 +1,39 @@
+{
+  "name": "collinscott",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "mongodb": "3.2.2",
+    "mongoose": "5.5.0",
+    "node-sass": "4.11.0",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
+    "react-router-dom": "5.0.0",
+    "react-scripts": "2.1.8",
+    "typescript": "3.3.4000"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "guppy": {
+    "id": "97810290-4e52-11e9-99cb-0776840987f2",
+    "name": "collinscott",
+    "type": "create-react-app",
+    "color": "#c41d00",
+    "icon": "./static/media/icon_yellowcup.0403cb3e.jpg",
+    "createdAt": 1553445224763
+  }
+}
