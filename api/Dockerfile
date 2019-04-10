@@ -5,7 +5,7 @@ FROM mhart/alpine-node:8.11.4
 WORKDIR /api
 
 # copy package.json into the container at /api
-COPY package*.json /api/
+COPY ./api/package*.json ./
 
 # install dependencies
 RUN npm install

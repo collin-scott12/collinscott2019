@@ -1,41 +1,51 @@
-version: "2"
+version: "3.5"
 services:
-    collinscott:
-        image: webapp-client
-        restart: always
-        ports:
-            - "3000:3000"
-        working_dir: collinscott/src/app
-        volumes:
-            - ./collinscott:/collinscott/src/app
-        entrypoint: ["npm", "start"]
-        links:
-            - api
-        networks:
-            - webappnetwork
-    api:
-        image: webapp-api
-        restart: always
-        ports:
-            - "9000:9000"
-        volumes:
-            - ./api:/api
-            - /api/node_modules
-        depends_on:
-            - mongodb
-        networks:
-            - webappnetwork
-    mongodb:
-        image: mongo
-        restart: always
-        container_name: mongodb
-        volumes:
-            - ./data-node:/data/db
-        ports:
-            - 27017:27017
-        command: mongod --noauth --smallfiles
-        networks:
-            - webappnetwork
+  web-app:
+    container_name: web-app
+    image: web-app
+    restart: always
+    # working_dir: /collinscott/src/app
+    build:
+      context: .
+      dockerfile: collinscott/Dockerfile
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    entrypoint: ["npm", "start"]
+    links:
+      - api
+    networks:
+      - webappnetwork
+  api:
+    # image: webapp-api
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./api:/api
+      - /api/node_modules
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    depends_on:
+      - mongodb
+    networks:
+      - webappnetwork
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    volumes:
+      - ./data-node:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --noauth --smallfiles
+    networks:
+      - webappnetwork
 networks:
-    webappnetwork:
-        driver: bridge
+  webappnetwork:
+    driver: bridge
