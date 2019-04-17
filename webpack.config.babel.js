@@ -1,69 +1,71 @@
-var cssnext = require('postcss-cssnext');
-var postcssFocus = require('postcss-focus');
-var postcssReporter = require('postcss-reporter');
+var cssnext = require("postcss-cssnext");
+var postcssFocus = require("postcss-focus");
+var postcssReporter = require("postcss-reporter");
 
-var cssModulesIdentName = '[name]__[local]__[hash:base64:5]';
-if (process.env.NODE_ENV === 'production') {
-  cssModulesIdentName = '[hash:base64]';
+var cssModulesIdentName = "[name]__[local]__[hash:base64:5]";
+if (process.env.NODE_ENV === "production") {
+  cssModulesIdentName = "[hash:base64]";
 }
 
 module.exports = {
   output: {
-    publicPath: '/',
-    libraryTarget: 'commonjs2',
+    publicPath: "/",
+    libraryTarget: "commonjs2"
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [
-      'client',
-      'node_modules',
-    ],
+    extensions: [".js", ".jsx"],
+    modules: ["client", "node_modules"]
   },
   module: {
     rules: [
       {
+        // test: /\.sass$|\.css$/,
+        // use: ["style-loader", "css-loader", "sass-loader"]
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader',
+            loader: "style-loader"
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               localIdentName: cssModulesIdentName,
               modules: true,
               importLoaders: 1,
-              sourceMap: true,
-            },
+              sourceMap: true
+            }
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               plugins: () => [
                 postcssFocus(),
                 cssnext({
-                  browsers: ['last 2 versions', 'IE > 10'],
+                  browsers: ["last 2 versions", "IE > 10"]
                 }),
                 postcssReporter({
-                  clearMessages: true,
-                }),
-              ],
-            },
+                  clearMessages: true
+                })
+              ]
+            }
           },
-        ],
+          {
+            loader: "sass-loader"
+          }
+        ]
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
-              limit: 10000,
-            },
-          },
-        ],
-      },
-    ],
-  },
+              limit: 10000
+            }
+          }
+        ]
+      }
+    ]
+  }
 };
