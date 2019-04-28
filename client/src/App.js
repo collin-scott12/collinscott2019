@@ -8,6 +8,7 @@ import Home from "./Home";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
+import { normalize } from "path";
 
 class App extends Component {
   constructor(props) {
