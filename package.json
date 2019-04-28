@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "color-name": "^1.1.4",
+    "concurrently": "^4.1.0",
+    "error-ex": "^1.3.2",
+    "lodash": "^4.17.11",
+    "route": "^0.2.5"
   }
 }
