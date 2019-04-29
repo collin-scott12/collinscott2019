@@ -54,25 +54,26 @@ class Portfolio extends Component {
     fetch("http://134.209.68.151:4000/api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
+    console.log("Got data");
   };
 
   render() {
     return (
-      <div>
-        <ul>
-          {data.length <= 0
-            ? "NO DB ENTRIES YET"
-            : data.map(dat => (
-                <li style={{ padding: "10px" }} key={data.message}>
-                  <span style={{ color: "gray" }}> Name: </span> {dat.Name}{" "}
-                  <br />
-                  <span style={{ color: "gray" }}> Description: </span>
-                  {dat.Description}
-                </li>
-              ))}
-        </ul>
-      </div>
-      // <PortfolioItem />
+      // <div>
+      //   <ul>
+      //     {data.length <= 0
+      //       ? "NO DB ENTRIES YET"
+      //       : data.map(dat => (
+      //           <li style={{ padding: "10px" }} key={data.message}>
+      //             <span style={{ color: "gray" }}> Name: </span> {dat.Name}{" "}
+      //             <br />
+      //             <span style={{ color: "gray" }}> Description: </span>
+      //             {dat.Description}
+      //           </li>
+      //         ))}
+      //   </ul>
+      // </div>
+      <PortfolioItem />
     );
   }
 
