@@ -3,7 +3,6 @@ const express = require("express");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
-const Data = require("./data");
 
 const API_PORT = 4000;
 const app = express();
@@ -11,7 +10,7 @@ app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const dbRoute = "localhost:27017";
+const dbRoute = "mongodb://localhost:27017/site";
 
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true });
@@ -23,8 +22,8 @@ db.once("open", () => console.log("connected to the database"));
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-require("data.js");
-require("popdummydata.js");
+require("./data.js");
+require("./popdummydata.js");
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format

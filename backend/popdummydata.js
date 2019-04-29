@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 var Data = mongoose.model("Data");
 
 var small = new Data({
