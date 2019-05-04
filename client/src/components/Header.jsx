@@ -13,46 +13,46 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div class="col-header-4">
-          <Link class="header-links" to="Portfolio">
+        <div className="col-header-4">
+          <Link className="header-links" to="Portfolio">
             PORTFOLIO
           </Link>
-          <Link class="header-links" to="About">
+          <Link className="header-links" to="About">
             ABOUT
           </Link>
-          <a class="header-links" href={Resume} target="_blank">
+          <a className="header-links" href={Resume} target="_blank">
             RESUME
           </a>
         </div>
-        <div class="col-header-2">
+        <div className="col-header-2">
           <Link to="../">
-            <Logo class="header-logo" />
+            <Logo className="header-logo" />
           </Link>
         </div>
-        <div class="col-header-4">
+        <div className="col-header-4">
           <a
-            class="header-icon-a"
+            className="header-icon-a"
             href="https://dribbble.com/collinscott"
             target="_blank"
           >
-            <Dribbble class="header-icon" />
+            <Dribbble className="header-icon" />
           </a>
           <a
-            class="header-icon-a"
+            className="header-icon-a"
             href="https://www.linkedin.com/in/collin-scott/"
             target="_blank"
           >
-            <Linkedin class="header-icon" />
+            <Linkedin className="header-icon" />
           </a>
           <a
-            class="header-icon-a"
+            className="header-icon-a"
             href="https://twitter.com/Collin_Scott12"
             target="_blank"
           >
-            <Twitter class="header-icon" />
+            <Twitter className="header-icon" />
           </a>
-          <a class="header-icon-a" href="mailto:collin@collinscott.com">
-            <Email class="header-icon" />
+          <a className="header-icon-a" href="mailto:collin@collinscott.com">
+            <Email className="header-icon" />
           </a>
         </div>
       </header>

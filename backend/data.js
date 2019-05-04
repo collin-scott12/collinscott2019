@@ -21,12 +21,10 @@ const DataSchema = new Schema(
       type: Boolean
     },
     ThumbnailImage: {
-      type: Buffer,
-      contentType: String
+      type: String
     },
     Image: {
-      type: Buffer,
-      contentType: String
+      type: String
     }
   },
   { timestamps: true }
