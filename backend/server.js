@@ -24,6 +24,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 require("./data.js");
 //require("./popdummydata.js");
+const Data = mongoose.model("Data");
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
