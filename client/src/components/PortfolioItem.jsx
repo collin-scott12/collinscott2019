@@ -4,10 +4,12 @@ import "../styles/style.sass";
 
 class PortfolioItem extends Component {
   render() {
-    // console.log(this.props.dat.Name);
     return (
       <div className="portfolio-item">
-        <div className="portfolio-item-img" />
+        <img
+          className="portfolio-item-img"
+          url={this.props.dat.ThumbnailImage}
+        />
         <div className="portfolio-item-text">
           <p className="portfolio-item-section">{this.props.dat.Section}</p>
           <p className="portfolio-item-title">{this.props.dat.Name}</p>
