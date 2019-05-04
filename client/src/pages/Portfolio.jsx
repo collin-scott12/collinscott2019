@@ -52,7 +52,7 @@ class Portfolio extends Component {
   // run on port 80
   getDataFromDb = () => {
     console.log("Getting data");
-    fetch("http://134.209.68.151:4000/getData")
+    fetch("http://134.209.68.151:4000/api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
     console.log("Got data");
