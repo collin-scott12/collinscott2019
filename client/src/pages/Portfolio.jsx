@@ -76,10 +76,10 @@ class Portfolio extends Component {
       // </div>
       // <PortfolioItem />
       <div>
-        {data.map((data, index) => {
+        {data.map((dat, index) => {
           return (
             <div>
-              <h1>{data.Name}</h1>
+              <h1>{dat.Name}</h1>
             </div>
           );
         })}
