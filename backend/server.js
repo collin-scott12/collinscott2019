@@ -116,9 +116,8 @@ router.post("/putData", (req, res) => {
 });
 
 // append /api for our http requests
-app.use("/api", router);
-
 app.use("/img", express.static(path.join(__dirname, "client/src/img")));
+app.use("/api", router);
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
