@@ -7,9 +7,9 @@ class PortfolioItem extends Component {
       <div class="portfolio-item">
         <div class="portfolio-item-img" />
         <div class="portfolio-item-text">
-          <p class="portfolio-item-section">{this.props.section}</p>
-          <p class="portfolio-item-title">{this.props.name}</p>
-          <p class="portfolio-item-description">{this.props.description}</p>
+          <p class="portfolio-item-section">{this.props.dat.section}</p>
+          <p class="portfolio-item-title">{this.props.dat.name}</p>
+          <p class="portfolio-item-description">{this.props.dat.description}</p>
           <div class="portfolio-item-view-div">
             <a class="portfolio-item-view" href="#">
               View

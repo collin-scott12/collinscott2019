@@ -37,7 +37,7 @@ app.use(logger("dev"));
 router.get("/getData", (req, res) => {
   Data.find((err, data) => {
     if (err) return res.json({ success: false, error: err });
-    console.log(data);
+    // console.log(data);
     return res.json({ success: true, data: data });
   });
 });
