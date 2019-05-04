@@ -5,7 +5,7 @@ class PortfolioItem extends Component {
   render() {
     return (
       <div class="portfolio-item">
-        <div class="portfolio-item-img" href={} />
+        <div class="portfolio-item-img" />
         <div class="portfolio-item-text">
           <p class="portfolio-item-section">{this.props.section}</p>
           <p class="portfolio-item-title">{this.props.name}</p>
