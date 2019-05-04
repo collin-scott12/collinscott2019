@@ -5,7 +5,7 @@ class PortfolioItem extends Component {
   render() {
     return (
       <div class="portfolio-item">
-        <div class="portfolio-item-img" href={props.image} />
+        {/* <div class="portfolio-item-img" href={props.image} />
         <div class="portfolio-item-text">
           <p class="portfolio-item-section">{props.section}</p>
           <p class="portfolio-item-title">{props.name}</p>
@@ -15,7 +15,7 @@ class PortfolioItem extends Component {
               View
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
