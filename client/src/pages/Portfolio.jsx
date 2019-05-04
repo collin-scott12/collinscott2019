@@ -81,9 +81,11 @@ class Portfolio extends Component {
         {data.length <= 0
           ? "NO DB ENTRIES YET"
           : data.map(dat => (
-              <div>
-                <h1>{dat.Name}</h1>
-              </div>
+              <PortfolioItem
+                section={dat.section}
+                name={dat.name}
+                description={dat.description}
+              />
             ))}
       </div>
     );
