@@ -8,7 +8,7 @@ class PortfolioItem extends Component {
       <div className="portfolio-item">
         <img
           className="portfolio-item-img"
-          src={this.props.dat.ThumbnailImage}
+          src={"http://134.209.68.151:4000" + this.props.dat.ThumbnailImage}
         />
         <div className="portfolio-item-text">
           <p className="portfolio-item-section">{this.props.dat.Section}</p>
