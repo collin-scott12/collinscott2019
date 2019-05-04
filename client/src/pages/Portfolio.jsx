@@ -76,13 +76,13 @@ class Portfolio extends Component {
       // </div>
       // <PortfolioItem />
       <div>
-        {data.map((dat, index) => {
-          return (
-            <div>
-              <h1>{dat.Name}</h1>
-            </div>
-          );
-        })}
+        {data.length <= 0
+          ? "NO DB ENTRIES YET"
+          : data.map(dat => (
+              <div>
+                <h1>{dat.Name}</h1>
+              </div>
+            ))}
       </div>
     );
   }
