@@ -51,6 +51,7 @@ class Portfolio extends Component {
   // // fetch data from our data base
   // run on port 80
   getDataFromDb = () => {
+    console.log("Getting data");
     fetch("http://134.209.68.151:4000/api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
@@ -73,7 +74,16 @@ class Portfolio extends Component {
       //         ))}
       //   </ul>
       // </div>
-      <PortfolioItem />
+      // <PortfolioItem />
+      <div>
+        {data.map((data, index) => {
+          return (
+            <div>
+              <h1>{data.Name}</h1>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 

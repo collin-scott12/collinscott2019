@@ -1,0 +1,35 @@
+2019-04-28T21:28:08.199-0400 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] MongoDB starting : pid=5112 port=27017 dbpath=/data/db 64-bit host=Collins-MacBook-Pro.local
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] db version v4.0.3
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] allocator: system
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] modules: none
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] build environment:
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten]     distarch: x86_64
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-04-28T21:28:08.239-0400 I CONTROL  [initandlisten] options: {}
+2019-04-28T21:28:08.242-0400 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-04-28T21:28:08.242-0400 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7680M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-04-28T21:28:08.848-0400 I STORAGE  [initandlisten] WiredTiger message [1556501288:848860][5112:0x1126895c0], txn-recover: Main recovery loop: starting at 5/39296
+2019-04-28T21:28:08.937-0400 I STORAGE  [initandlisten] WiredTiger message [1556501288:937484][5112:0x1126895c0], txn-recover: Recovering log 5 through 6
+2019-04-28T21:28:08.999-0400 I STORAGE  [initandlisten] WiredTiger message [1556501288:999364][5112:0x1126895c0], txn-recover: Recovering log 6 through 6
+2019-04-28T21:28:09.050-0400 I STORAGE  [initandlisten] WiredTiger message [1556501289:50157][5112:0x1126895c0], txn-recover: Set global recovery timestamp: 0
+2019-04-28T21:28:09.122-0400 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] 
+2019-04-28T21:28:09.184-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-04-28T21:28:09.248-0400 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2019-04-28T21:28:09.252-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-04-28T21:28:10.074-0400 I NETWORK  [listener] connection accepted from 127.0.0.1:53999 #1 (1 connection now open)
+2019-04-28T21:28:10.075-0400 I NETWORK  [conn1] received client metadata from 127.0.0.1:53999 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.5.0" } }
+2019-04-28T21:28:17.088-0400 I NETWORK  [conn1] end connection 127.0.0.1:53999 (0 connections now open)
