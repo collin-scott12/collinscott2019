@@ -59,7 +59,7 @@ class Portfolio extends Component {
   };
 
   render() {
-    getDataFromDb();
+    // Portfolio.getDataFromDb();
     return (
       // <div>
       //   <ul>
@@ -78,13 +78,13 @@ class Portfolio extends Component {
       // <PortfolioItem />
 
       <div>
-        {/* {data.length <= 0
+        {data.length <= 0
           ? "NO DB ENTRIES YET"
           : data.map(dat => (
               <div>
                 <h1>{dat.Name}</h1>
               </div>
-            ))} */}
+            ))}
       </div>
     );
   }
