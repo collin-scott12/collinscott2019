@@ -57,11 +57,11 @@ class PortfolioItemPage extends Component {
       return element.ID == id;
     });
     if (thedata) {
-      //   console.log(thedata.Section);
+      // console.log(this.props.dat.Image);
       return (
         <div>
           <h1>{thedata.Section}</h1>
-          <img src={"http://134.209.68.151:4000" + this.props.dat.Image} />
+          <img src={"http://134.209.68.151:4000" + thedata.Image} />
           <h1>{thedata.Name}</h1>
           <h1>{thedata.Description}</h1>
         </div>
