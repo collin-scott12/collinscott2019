@@ -59,6 +59,7 @@ class Portfolio extends Component {
   };
 
   render() {
+    getDataFromDb();
     return (
       // <div>
       //   <ul>
