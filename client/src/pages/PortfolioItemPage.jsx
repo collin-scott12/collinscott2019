@@ -61,6 +61,7 @@ class PortfolioItemPage extends Component {
       return (
         <div>
           <h1>{thedata.Section}</h1>
+          <img src={"http://134.209.68.151:4000" + this.props.dat.Image} />
           <h1>{thedata.Name}</h1>
           <h1>{thedata.Description}</h1>
         </div>

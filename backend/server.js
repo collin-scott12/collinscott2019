@@ -116,7 +116,7 @@ router.post("/putData", (req, res) => {
 });
 
 // append /api for our http requests
-console.log(path.join(__dirname, "../client/src/img/"));
+// console.log(path.join(__dirname, "../client/src/img/"));
 app.use("/img", express.static(path.join(__dirname, "../client/src/img/")));
 app.use("/api", router);
 
