@@ -24,7 +24,7 @@ db.once("open", () => console.log("connected to the database"));
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 require("./data.js");
-require("./portfolio.js");
+// require("./portfolio.js");
 const Data = mongoose.model("Data");
 
 // (optional) only made for logging and
