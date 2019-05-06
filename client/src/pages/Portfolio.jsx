@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "../styles/style.sass";
 
 import PortfolioItem from "../components/PortfolioItem";
@@ -62,7 +61,7 @@ class Portfolio extends Component {
     const { data } = this.state;
     // console.log(data);
     return (
-      <div>
+      <div className="portfolio">
         {data.length <= 0
           ? "NO DB ENTRIES YET"
           : data.map(dat => <PortfolioItem key={dat.ID} dat={dat} />)}

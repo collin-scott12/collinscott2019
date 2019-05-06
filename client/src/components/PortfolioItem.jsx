@@ -6,10 +6,12 @@ class PortfolioItem extends Component {
   render() {
     return (
       <div className="portfolio-item">
-        <img
-          className="portfolio-item-img"
-          src={"http://134.209.68.151:4000" + this.props.dat.ThumbnailImage}
-        />
+        <div>
+          <img
+            className="portfolio-item-img"
+            src={"http://134.209.68.151:4000" + this.props.dat.ThumbnailImage}
+          />
+        </div>
         <div className="portfolio-item-text">
           <p className="portfolio-item-section">{this.props.dat.Section}</p>
           <p className="portfolio-item-title">{this.props.dat.Name}</p>

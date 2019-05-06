@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/style.sass";
 
 import Resume from "../img/resume.pdf";
+import HamburgerBar from "../components/HamburgerBar";
 import { ReactComponent as Logo } from "../img/logo.svg";
 import { ReactComponent as Dribbble } from "../img/dribbble.svg";
 import { ReactComponent as Linkedin } from "../img/linkedin.svg";
@@ -54,6 +55,7 @@ class Header extends Component {
           <a className="header-icon-a" href="mailto:collin@collinscott.com">
             <Email className="header-icon" />
           </a>
+          <HamburgerBar />
         </div>
       </header>
     );

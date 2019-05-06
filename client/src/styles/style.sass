@@ -2,6 +2,8 @@
 
 $primary-blue: #1199EE
 $secondary-grey: #999999
+$small: 1000px
+$medium: 1290px
 
 body
     font-family: "Montserrat"
@@ -19,6 +21,10 @@ section
     padding-top: 50px
     padding-bottom: 50px
     font-size: 0
+    @media screen and (max-width: $medium)
+        padding: 50px
+        padding-top: 10px
+        padding-bottom: 10px
 
 h1
     font-size: 72px
@@ -49,6 +55,7 @@ h4
 h5
     font-size: 20px
     font-weight: normal
+    line-height: 30px
     color: #000
     margin: 0
     margin-top: 10px
@@ -59,6 +66,8 @@ h5
     margin-top: 100px
     margin-bottom: 100px
     max-width: 1500px
+    @media screen and (max-width: $medium)
+        margin-top: 30px
 
 .col-header-4
     display: inline-block
@@ -77,25 +86,58 @@ h5
     padding: 30px
     vertical-align: middle
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
         color: $primary-blue
+    @media screen and (max-width: $small)
+        display: none
 
 .header-logo
     width: 80px
     vertical-align: middle
     fill: #000
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
         fill: $primary-blue
 
 .header-icon-a
     padding: 30px
+    @media screen and (max-width: $small)
+        display: none
 
 .header-icon
     fill: #000
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
-        fill: $primary-blue
+        fill: $primary-blue !important
+
+.header-hamburgerbar
+    display: none
+    @media screen and (max-width: $small)
+        display: inline-block
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes slideIn
+  0%
+    transform: translateX(-2%)
+  100%
+    transform: translateX(0)
+
+@keyframes shrink
+  0%
+    width: 95%
+  100%
+    width: 90%
 
 .footer-text
     margin-left: 100px
@@ -108,9 +150,13 @@ h5
 .home-content-top
     text-align: center
     margin-top: 200px
+    @media screen and (max-width: $medium)
+        margin-top: 100px
 
 .home-content
     margin-top: 250px
+    @media screen and (max-width: $medium)
+        margin-top: 100px
 
 .home-block-1
     margin-top: 200px
@@ -119,10 +165,17 @@ h5
 .home-block-2
     margin-top: 200px
     text-align: right
+    @media screen and (max-width: $medium)
+        margin-top: 100px
 
 .home-block-3
     margin-top: 200px
     text-align: center
+    @media screen and (max-width: $medium)
+        margin-top: 100px
+
+.home-block-text
+    max-width: 600px
 
 .home-leftImage
     // background-image: url()
@@ -132,8 +185,11 @@ h5
     height: 550px
     vertical-align: middle
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
-        background-color: rgba(0,0,0,.3)
+    //     background-color: rgba(0,0,0,.3)
+        cursor: pointer
 
 .home-rightText
     text-align: left
@@ -141,6 +197,11 @@ h5
     margin-left: 100px
     // width: 30%
     vertical-align: middle
+    @media screen and (max-width: $medium)
+        width: 100%
+        margin: 0
+        margin-top: 50px
+        text-align: center
 
 .home-rightImage
     // background-image: url('/img/web-dev.jpg')
@@ -150,8 +211,11 @@ h5
     height: 550px
     vertical-align: middle
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
-        background-color: rgba(0,0,0,.3)
+    //     background-color: rgba(0,0,0,.3)
+        cursor: 
 
 .home-leftText
     text-align: left
@@ -159,38 +223,80 @@ h5
     margin-right: 100px
     // width: 30%
     vertical-align: middle
+    @media screen and (max-width: $medium)
+        width: 100%
+        margin: 0
+        margin-bottom: 50px
+        text-align: center
 
 .home-centerImage
     // background-image: url()
     // background-color: #ddd
     width: 100%
     height: 700px
+    margin: auto
     transition: .3s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
         background-color: rgba(0,0,0,.3)
+
+.home-seperator
+    display: none
+    border-bottom: 1px solid #ddd
+    margin-top: 100px
+    @media screen and (max-width: $medium)
+        display: block
 
 .img-webdev
     background-image: url('../img/web-dev.jpg')
     background-repeat: no-repeat
     background-size: cover
+    @media screen and (max-width: $medium)
+        width: 100%
 
 .img-webdes
     background-image: url('../img/web-des.jpg')
     background-repeat: no-repeat
     background-size: cover
+    @media screen and (max-width: $medium)
+        width: 100%
 
 .img-laz
     background-image: url('../img/laz-charlotte.jpg')
     background-repeat: no-repeat
     background-size: cover
+    background-position: center
+
+.img-laz-logo
+    background-image: url("../img/laz-logo.svg")
+    background-repeat: no-repeat
+    background-position: 49%, 40%
+    background-size: 300px
 
 .img-app
     background-image: url('../img/app-football.jpg')
     background-repeat: no-repeat
     background-size: cover
+    background-position: center
+
+.img-rwc
+    background-image: url('../img/rwc.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+.img-gd
+    background-image: url('../img/app-football.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
 
 
 // PORTFOLIO STYLES
+.portfolio
+    text-align: center
+
 .portfolio-item
     display: inline-block
     width: 300px
@@ -198,12 +304,20 @@ h5
     background-color: #fff
     margin: 15px
     box-shadow: 0px 10px 40px rgba(0,0,0,.1)
+    text-align: left
     transition: .2s
+    -webkit-transition: .3s
+    -o-transition: .3s
     &:hover
         box-shadow: 0px 10px 40px rgba(0,0,0,.2)
 
 .portfolio-item-img
     height: 250px
+    width: 300px
+    // background-size: cover
+    // background-repeat: no-repeat
+    // background-position: 50% 50%
+    object-fit: cover
     background-color: $primary-blue
 
 .portfolio-item-text
@@ -253,8 +367,33 @@ h5
     font-size: 25px
     font-weight: 400
     line-height: 50px
-    max-width: 900px
+    // max-width: 900px
 
 .about-title
     margin-top: 50px
     font-size: 35px;
+
+// PortfolioItemPage
+.portitem
+    max-width: 1000px
+    margin: auto
+    @media screen and (max-width: $medium)
+        width: 100%
+
+.portitem-section
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 10px
+    text-align: left
+    @media screen and (max-width: $medium)
+        m
+
+.portitem-name
+    margin-bottom: 30px
+    text-align: left
+
+.portitem-img
+    width: 100%
+
+.portitem-desc
+    text-align: left

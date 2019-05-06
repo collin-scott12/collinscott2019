@@ -59,11 +59,14 @@ class PortfolioItemPage extends Component {
     if (thedata) {
       // console.log(this.props.dat.Image);
       return (
-        <div>
-          <h1>{thedata.Section}</h1>
-          <img src={"http://134.209.68.151:4000" + thedata.Image} />
-          <h1>{thedata.Name}</h1>
-          <h1>{thedata.Description}</h1>
+        <div className="portitem">
+          <h4 className="portitem-section">{thedata.Section}</h4>
+          <h3 className="portitem-name">{thedata.Name}</h3>
+          <img
+            className="portitem-img"
+            src={"http://134.209.68.151:4000" + thedata.Image}
+          />
+          <p className="portitem-desc">{thedata.Description}</p>
         </div>
       );
     } else {

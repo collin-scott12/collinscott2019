@@ -24,6 +24,14 @@ class About extends Component {
               and development, I have mastered the tricks and patterns needed
               accomplishing many different issues.
             </p>
+            <p className="para-type about-text">
+              I have a skill set of the Adobe Creative Cloud Suite and web
+              development tools. I spend a lot of my time designing and
+              implementing web/app projects, creating on graphics, and designing
+              logos and illustrations for clients. I am majoring in computer
+              science at Appalachian State University and am looking to fulfill
+              my love of design and development along the way.
+            </p>
           </div>
         </div>
       </section>
