@@ -152,16 +152,25 @@ class MenuItem extends React.Component {
           Resume
         </Link>
         <div style={styles.line} />
-        <a href="https://dribbble.com/collinscott" style={styles.menuItem}>
+        <a
+          href="https://dribbble.com/collinscott"
+          style={styles.menuItem}
+          target="_blank"
+        >
           <Dribbble className="header-icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/collin-scott/"
           style={styles.menuItem}
+          target="_blank"
         >
           <Linkedin className="header-icon" />
         </a>
-        <a href="https://twitter.com/Collin_Scott12" style={styles.menuItem}>
+        <a
+          href="https://twitter.com/Collin_Scott12"
+          style={styles.menuItem}
+          target="_blank"
+        >
           <Twitter className="header-icon" />
         </a>
         <a href="mailto:collin@collinscott.com" style={styles.menuItem}>
