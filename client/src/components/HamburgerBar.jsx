@@ -8,6 +8,7 @@ import { ReactComponent as Dribbble } from "../img/dribbble.svg";
 import { ReactComponent as Linkedin } from "../img/linkedin.svg";
 import { ReactComponent as Twitter } from "../img/twitter.svg";
 import { ReactComponent as Email } from "../img/email.svg";
+import { NONAME } from "dns";
 
 class HamburgerBar extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class HamburgerBar extends Component {
         fontFamily: "Lobster"
       }
     };
-    const menu = ["Portfolio", "About", "Resume", "Email"];
+    const menu = ["Portfolio"];
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
@@ -93,15 +94,18 @@ class MenuItem extends React.Component {
         animationDelay: this.props.delay
       },
       menuItem: {
-        fontFamily: `'Open Sans', sans-serif`,
+        // fontFamily: `'Open Sans', sans-serif`,
         fontSize: "1.2rem",
         padding: "1rem 0",
         margin: "0 5%",
+        // marginTop: "50px",
+        lineHeight: "60px",
         cursor: "pointer",
         color: this.state.hover ? "#1199EE" : "black",
         transition: "color 0.2s ease-in-out",
         animation: "0.5s slideIn forwards",
-        animationDelay: this.props.delay
+        animationDelay: this.props.delay,
+        textDecoration: "none"
       },
       line: {
         width: "90%",
@@ -114,7 +118,7 @@ class MenuItem extends React.Component {
     };
     return (
       <div style={styles.container}>
-        <div
+        {/* <div
           style={styles.menuItem}
           onMouseEnter={() => {
             this.handleHover();
@@ -126,24 +130,50 @@ class MenuItem extends React.Component {
         >
           {this.props.children}
         </div>
-        <div style={styles.line} />
-
-        {/* <div style={styles.menuItem}>Home</div>
-        <div style={styles.line} />
-        <div style={styles.menuItem}>Portfolio</div>
-        <div style={styles.line} />
-        <div style={styles.menuItem}>About</div>
-        <div style={styles.line} />
-        <div style={styles.menuItem}>Resume</div>
-        <div style={styles.line} />
-        <div style={styles.menuItem}>Email</div>
         <div style={styles.line} /> */}
+
+        <Link to="../" onClick={this.props.onClick} style={styles.menuItem}>
+          Home
+        </Link>
+        <div style={styles.line} />
+        <Link
+          to="Portfolio"
+          onClick={this.props.onClick}
+          style={styles.menuItem}
+        >
+          Portfolio
+        </Link>
+        <div style={styles.line} />
+        <Link to="About" onClick={this.props.onClick} style={styles.menuItem}>
+          About
+        </Link>
+        <div style={styles.line} />
+        <Link to="Resume" onClick={this.props.onClick} style={styles.menuItem}>
+          Resume
+        </Link>
+        <div style={styles.line} />
+        <a href="https://dribbble.com/collinscott" style={styles.menuItem}>
+          <Dribbble className="header-icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/collin-scott/"
+          style={styles.menuItem}
+        >
+          <Linkedin className="header-icon" />
+        </a>
+        <a href="https://twitter.com/Collin_Scott12" style={styles.menuItem}>
+          <Twitter className="header-icon" />
+        </a>
+        <a href="mailto:collin@collinscott.com" style={styles.menuItem}>
+          <Email className="header-icon" />
+        </a>
+        <div style={styles.line} />
       </div>
     );
   }
 }
 
-/* Menu.jsx */
+/* Menu.jsx MENU DROP DOWN */
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -189,7 +219,7 @@ class Menu extends React.Component {
   }
 }
 
-/* MenuButton.jsx */
+/* MenuButton.jsx  HAMBURGER BUTTON */
 class MenuButton extends React.Component {
   constructor(props) {
     super(props);
@@ -212,8 +242,10 @@ class MenuButton extends React.Component {
   render() {
     const styles = {
       container: {
-        height: "80px",
-        width: "80px",
+        height: "32px",
+        width: "32px",
+        marginTop: "20px",
+        marginLeft: "20px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
