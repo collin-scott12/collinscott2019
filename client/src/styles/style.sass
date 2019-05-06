@@ -176,6 +176,7 @@ h5
 
 .home-block-text
     max-width: 600px
+    margin: auto
 
 .home-leftImage
     // background-image: url()
@@ -195,7 +196,7 @@ h5
     text-align: left
     display: inline-block
     margin-left: 100px
-    // width: 30%
+    width: 30%
     vertical-align: middle
     @media screen and (max-width: $medium)
         width: 100%
@@ -221,7 +222,7 @@ h5
     text-align: left
     display: inline-block
     margin-right: 100px
-    // width: 30%
+    width: 30%
     vertical-align: middle
     @media screen and (max-width: $medium)
         width: 100%
@@ -247,6 +248,14 @@ h5
     margin-top: 100px
     @media screen and (max-width: $medium)
         display: block
+
+.home-seperator-on
+    border-bottom: 1px solid #ddd
+    margin-top: 100px
+
+.home-company-title
+    text-align: center
+    margin-top: 200px
 
 .img-webdev
     background-image: url('../img/web-dev.jpg')
@@ -279,6 +288,12 @@ h5
     background-repeat: no-repeat
     background-size: cover
     background-position: center
+
+.img-app-logo
+    background-image: url("../img/app-logo.svg")
+    background-repeat: no-repeat
+    background-position: 50%, 50%
+    background-size: 200px
 
 .img-rwc
     background-image: url('../img/rwc.jpg')
@@ -341,6 +356,9 @@ h5
     font-size: 12px
     font-weight: 300
     margin: 0
+    text-overflow: ellipsis
+    white-space: nowrap;
+    overflow: hidden;
 
 .portfolio-item-view-div
     margin: 0
@@ -397,3 +415,4 @@ h5
 
 .portitem-desc
     text-align: left
+    line-height: 30px

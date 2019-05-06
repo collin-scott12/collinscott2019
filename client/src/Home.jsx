@@ -39,26 +39,28 @@ class Home extends Component {
             </div>
             <div className="home-rightImage img-webdev" />
           </div>
-          <div className="home-seperator" />
+          <div className="home-seperator-on" />
+          <h2 className="home-company-title">Companies that I work for:</h2>
           <a href="https://lazaruscharlotte.com" target="_blank">
             <div className="home-block-3 img-laz">
               <div className="home-centerImage img-laz-logo" />
             </div>
           </a>
           <div className="home-seperator" />
-          <div className="home-block-3 img-app">
-            <div className="home-centerImage">
-              <div>Appalachian State Football</div>
+          <a
+            href="https://appstatesports.com/index.aspx?path=football"
+            target="_blank"
+          >
+            <div className="home-block-3 img-app">
+              <div className="home-centerImage img-app-logo" />
             </div>
-          </div>
+          </a>
           <div className="home-seperator" />
-          <div className="home-block-3 img-rwc">
-            <div className="home-centerImage" />
-          </div>
-          <div className="home-seperator" />
-          <div className="home-block-3 img-gd">
-            <div className="home-centerImage">Graphic Design</div>
-          </div>
+          <a href="http://www.raysweather.com" target="_blank">
+            <div className="home-block-3 img-rwc">
+              <div className="home-centerImage" />
+            </div>
+          </a>
         </div>
       </div>
     );
