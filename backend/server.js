@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 var cors = require("cors");
 const bodyParser = require("body-parser");
-const logger = require("morgan");
+// const logger = require("morgan");
 const path = require("path");
 
 const API_PORT = 4000;
@@ -29,9 +29,9 @@ const Data = mongoose.model("Data");
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(logger("dev"));
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(logger("dev"));
 
 // this is our get method
 // this method fetches all available data in our database
@@ -119,6 +119,12 @@ router.post("/putData", (req, res) => {
 // console.log(path.join(__dirname, "../client/src/img/"));
 app.use("/img", express.static(path.join(__dirname, "../client/src/img/")));
 app.use("/api", router);
+
+app.get("/*", function(req, res, next) {
+  if (req.headers.host.match(/^www/) === null)
+    res.redirect("http://www." + req.headers.host + req.url, 301);
+  else next();
+});
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
