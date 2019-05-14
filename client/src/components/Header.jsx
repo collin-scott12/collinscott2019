@@ -15,10 +15,10 @@ class Header extends Component {
     return (
       <header>
         <div className="col-header-4">
-          <Link className="header-links" to="Portfolio">
+          <Link className="header-links" to="/Portfolio">
             PORTFOLIO
           </Link>
-          <Link className="header-links" to="About">
+          <Link className="header-links" to="/About">
             ABOUT
           </Link>
           <a className="header-links" href={Resume} target="_blank">
@@ -26,7 +26,7 @@ class Header extends Component {
           </a>
         </div>
         <div className="col-header-2">
-          <Link to="../">
+          <Link to="/">
             <Logo className="header-logo" />
           </Link>
         </div>

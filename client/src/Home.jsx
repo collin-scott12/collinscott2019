@@ -40,7 +40,7 @@ class Home extends Component {
             <div className="home-rightImage img-webdev" />
           </div>
           <div className="home-seperator-on" />
-          <h2 className="home-company-title">Companies that I work for:</h2>
+          <h4 className="home-company-title">Organizations that I work for:</h4>
           <a href="https://lazaruscharlotte.com" target="_blank">
             <div className="home-block-3 img-laz">
               <div className="home-centerImage img-laz-logo" />

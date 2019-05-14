@@ -132,25 +132,30 @@ class MenuItem extends React.Component {
         </div>
         <div style={styles.line} /> */}
 
-        <Link to="../" onClick={this.props.onClick} style={styles.menuItem}>
+        <Link to="/" onClick={this.props.onClick} style={styles.menuItem}>
           Home
         </Link>
         <div style={styles.line} />
         <Link
-          to="Portfolio"
+          to="/Portfolio"
           onClick={this.props.onClick}
           style={styles.menuItem}
         >
           Portfolio
         </Link>
         <div style={styles.line} />
-        <Link to="About" onClick={this.props.onClick} style={styles.menuItem}>
+        <Link to="/About" onClick={this.props.onClick} style={styles.menuItem}>
           About
         </Link>
         <div style={styles.line} />
-        <Link to="Resume" onClick={this.props.onClick} style={styles.menuItem}>
+        <a
+          href={Resume}
+          onClick={this.props.onClick}
+          style={styles.menuItem}
+          target="_blank"
+        >
           Resume
-        </Link>
+        </a>
         <div style={styles.line} />
         <a
           href="https://dribbble.com/collinscott"
