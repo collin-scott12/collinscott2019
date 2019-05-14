@@ -364,6 +364,7 @@ h5
     font-weight: bold
     margin: 0
     margin-bottom: 5px
+    color: #000
 
 .portfolio-item-description
     font-size: 12px
@@ -372,6 +373,7 @@ h5
     text-overflow: ellipsis
     white-space: nowrap;
     overflow: hidden;
+    color: #000
 
 .portfolio-item-view-div
     margin: 0
@@ -382,6 +384,10 @@ h5
     font-weight: bold
     text-decoration: none
     color: $primary-blue
+
+.portfolio-item-click
+    text-decoration: none
+    cursor: pointer
 
 // ABOUT STYLES
 .profile-pic
@@ -408,20 +414,22 @@ h5
 .portitem
     max-width: 1000px
     margin: auto
-    @media screen and (max-width: $medium)
-        width: 100%
+    @media screen and (max-width: $small)
+        // width: 100%
+        margin-left: 20px
+        margin-right: 20px
 
 .portitem-section
     font-size: 16px
     text-transform: uppercase
     margin-bottom: 10px
     text-align: left
-    @media screen and (max-width: $medium)
-        m
+        
 
 .portitem-name
-    margin-bottom: 30px
+    margin-bottom: 26px
     text-align: left
+    font-size: 26px
 
 .portitem-img
     width: 100%

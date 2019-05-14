@@ -59,12 +59,13 @@ class Portfolio extends Component {
 
   render() {
     const { data } = this.state;
-    // console.log(data);
     return (
       <div className="portfolio">
         {data.length <= 0
-          ? "NO DB ENTRIES YET"
-          : data.map(dat => <PortfolioItem key={dat.ID} dat={dat} />)}
+          ? "Opps, something went wrong?"
+          : data.map(dat =>
+              dat.Display ? <PortfolioItem key={dat.ID} dat={dat} /> : null
+            )}
       </div>
     );
   }

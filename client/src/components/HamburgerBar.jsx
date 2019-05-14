@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import "../styles/style.sass";
 
 import Resume from "../img/resume.pdf";
-import { ReactComponent as Logo } from "../img/logo.svg";
 import { ReactComponent as Dribbble } from "../img/dribbble.svg";
 import { ReactComponent as Linkedin } from "../img/linkedin.svg";
 import { ReactComponent as Twitter } from "../img/twitter.svg";
 import { ReactComponent as Email } from "../img/email.svg";
-import { NONAME } from "dns";
 
 class HamburgerBar extends Component {
   constructor(props) {
@@ -153,6 +151,7 @@ class MenuItem extends React.Component {
           onClick={this.props.onClick}
           style={styles.menuItem}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Resume
         </a>
@@ -161,6 +160,7 @@ class MenuItem extends React.Component {
           href="https://dribbble.com/collinscott"
           style={styles.menuItem}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Dribbble className="header-icon" />
         </a>
@@ -168,6 +168,7 @@ class MenuItem extends React.Component {
           href="https://www.linkedin.com/in/collin-scott/"
           style={styles.menuItem}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Linkedin className="header-icon" />
         </a>
@@ -175,6 +176,7 @@ class MenuItem extends React.Component {
           href="https://twitter.com/Collin_Scott12"
           style={styles.menuItem}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Twitter className="header-icon" />
         </a>

@@ -8,7 +8,7 @@ class Home extends Component {
         <div className="home-content-top">
           <h1>Hello, I'm Collin Scott!</h1>
           <h2>A User Experience (UX) Designer</h2>
-          <h3>With a knack for Web Development</h3>
+          <h3>With a bit of Web Development</h3>
         </div>
         <div className="home-content">
           <div className="home-block-1">
@@ -41,7 +41,11 @@ class Home extends Component {
           </div>
           <div className="home-seperator-on" />
           <h4 className="home-company-title">Organizations that I work for:</h4>
-          <a href="https://lazaruscharlotte.com" target="_blank">
+          <a
+            href="https://lazaruscharlotte.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="home-block-3 img-laz">
               <div className="home-centerImage img-laz-logo" />
             </div>
@@ -50,13 +54,18 @@ class Home extends Component {
           <a
             href="https://appstatesports.com/index.aspx?path=football"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="home-block-3 img-app">
               <div className="home-centerImage img-app-logo" />
             </div>
           </a>
           <div className="home-seperator" />
-          <a href="http://www.raysweather.com" target="_blank">
+          <a
+            href="http://www.raysweather.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="home-block-3 img-rwc">
               <div className="home-centerImage" />
             </div>

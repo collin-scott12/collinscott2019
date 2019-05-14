@@ -21,7 +21,12 @@ class Header extends Component {
           <Link className="header-links" to="/About">
             ABOUT
           </Link>
-          <a className="header-links" href={Resume} target="_blank">
+          <a
+            className="header-links"
+            href={Resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             RESUME
           </a>
         </div>
@@ -35,6 +40,7 @@ class Header extends Component {
             className="header-icon-a"
             href="https://dribbble.com/collinscott"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Dribbble className="header-icon" />
           </a>
@@ -42,6 +48,7 @@ class Header extends Component {
             className="header-icon-a"
             href="https://www.linkedin.com/in/collin-scott/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Linkedin className="header-icon" />
           </a>
@@ -49,6 +56,7 @@ class Header extends Component {
             className="header-icon-a"
             href="https://twitter.com/Collin_Scott12"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Twitter className="header-icon" />
           </a>

@@ -18,10 +18,6 @@ class PortfolioItemPage extends Component {
     objectToUpdate: null
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   // // when component mounts, first thing it does is fetch all existing data in our db
   // // then we incorporate a polling logic so that we can easily see if our db has
   // // changed and implement those changes into our UI
@@ -64,6 +60,7 @@ class PortfolioItemPage extends Component {
           <h3 className="portitem-name">{thedata.Name}</h3>
           <img
             className="portitem-img"
+            alt={thedata.Name}
             src={"http://134.209.68.151:4000" + thedata.Image}
           />
           <p className="portitem-desc">{thedata.Description}</p>

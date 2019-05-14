@@ -7,7 +7,11 @@ class About extends Component {
   render() {
     return (
       <section>
-        <img className="profile-pic profile-main" src={ProfilePic} />
+        <img
+          className="profile-pic profile-main"
+          alt="ProfilePic"
+          src={ProfilePic}
+        />
         <div className="profile-main">
           <h4>Collin A Scott</h4>
           <h5>User Experience Designer</h5>
